@@ -1,0 +1,5 @@
+/* Custom gradient header style - keeping the visual appearance */
+.custom-gradient-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}

@@ -1,0 +1,39 @@
+<div class="container-fluid">
+
+  <!-- Loading Spinner -->
+  <div *ngIf="isLoading" class="text-center mb-3">
+    <div class="spinner-border text-primary" role="status">
+      <span class="visually-hidden">Loading...</span>
+    </div>
+    <p class="mt-2">Processing request...</p>
+  </div>
+
+  <!-- Error Message -->
+  <div *ngIf="errorMessage" class="alert alert-danger alert-dismissible fade show mb-3" role="alert">
+    <strong>Error:</strong> {{ errorMessage }}
+    <button type="button" class="btn btn-sm btn-outline-danger ms-2" (click)="retryLoadEmployees()">
+      Retry
+    </button>
+    <button type="button" class="btn-close" aria-label="Close" (click)="errorMessage = null"></button>
+  </div>
+
+  <!-- Employee Form Section with Bootstrap spacing -->
+  <div class="mb-4">
+    <app-employee-form
+      [editModeEmployee]="editingEmployee"
+      [disabled]="isLoading"
+      (employeeSubmitted)="onEmployeeSubmit($event)">
+    </app-employee-form>
+  </div>
+
+  <!-- Employee List Section -->
+  <div>
+    <app-employee-list
+      [employees]="employees"
+      [disabled]="isLoading"
+      (editEmployee)="onEditEmployee($event)"
+      (deleteEmployee)="onDeleteEmployee($event)">
+    </app-employee-list>
+  </div>
+
+</div>

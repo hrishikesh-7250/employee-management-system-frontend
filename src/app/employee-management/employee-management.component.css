@@ -1,0 +1,16 @@
+/* Employee Management Component Styles - Bootstrap Enhanced */
+
+/* Remove default padding from container-fluid since Bootstrap handles spacing */
+.container-fluid {
+  padding: 0;
+}
+
+/* Use Bootstrap spacing utilities for consistent margins */
+app-employee-form {
+  display: block;
+  margin-bottom: 1rem; /* Adds spacing below the form */
+}
+
+app-employee-list {
+  display: block;
+}

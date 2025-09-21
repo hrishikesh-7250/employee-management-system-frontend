@@ -1,0 +1,23 @@
+/* Employee List Component - Bootstrap Enhanced */
+
+/* Minimal custom styles - let Bootstrap handle most styling */
+.btn i {
+    margin-right: 0.25rem;
+}
+
+/* Custom hover effects that enhance Bootstrap's table-hover */
+.table-hover tbody tr:hover {
+    background-color: var(--bs-gray-100) !important;
+}
+
+/* Ensure proper button sizing on mobile using Bootstrap responsive utilities */
+@media (max-width: 576px) {
+    .btn-sm {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+    }
+}
+
+.btn i {
+    margin-right: 0.15rem;
+}
